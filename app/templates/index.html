@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<h1 style="text-align: center;">Welcome to My Bakery</h1>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>View Details</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+          <td>{{ product.name }}</td>
+          <td>${{ product.price }}</td>
+          <td><form method="post" action="/viewdetails/{{ product.id }}"><input type="submit" value="View Details"></form></td>
+        </tr>
+        {% endfor %}
+      </table>
+{% endblock %}

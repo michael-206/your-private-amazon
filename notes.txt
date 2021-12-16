@@ -1,0 +1,4 @@
+stripe API key:
+
+1. signup on stripe.com and get API
+2. ask dalia(client) to get an account and send me login info

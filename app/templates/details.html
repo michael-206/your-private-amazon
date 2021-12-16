@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{{ product.name }}</h1>
+    <form action="/success/{{ product.id }}" method="post"><input type="submit" value="Order"></form>
+    <h2>${{ product.price }}</h2>
+    <h3>{{ product.description }}</h3>
+    <h3>Contains:</h3>
+    <h3>{{ product.ingredients }}</h3>
+{% endblock %}

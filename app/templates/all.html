@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<h1 style="text-align: center;">All orders</h1>
+
+        {% for order in orders %}
+          <h3>{{ order.product }}</h3>
+          <p>{{ order.orderpin }}</p>
+          <form action="/fullfill/{{ order.id }}" method="post"><input type="submit" value="fullfilled"></form>
+          <hr>
+        {% endfor %}
+
+{% endblock %}
